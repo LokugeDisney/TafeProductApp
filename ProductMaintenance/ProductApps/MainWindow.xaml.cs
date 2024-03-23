@@ -38,6 +38,10 @@ namespace ProductApps
                 // Calculate total charge including delivery charge
                 decimal totalCharge = cProduct.TotalPayment + 25.00m;
                 totalChargeTextBox.Text = totalCharge.ToString();
+
+                // Calculate total charge including delivery charge and wrapping charge
+                decimal totalWrapCharge = cProduct.TotalPayment + 25.00m + 5.00m;
+                totalWrapChargeTextBox.Text = totalWrapCharge.ToString();
             }
             catch (FormatException)
             {
