@@ -42,6 +42,10 @@ namespace ProductApps
                 // Calculate total charge including delivery charge and wrapping charge
                 decimal totalWrapCharge = cProduct.TotalPayment + 25.00m + 5.00m;
                 totalWrapChargeTextBox.Text = totalWrapCharge.ToString();
+
+                // Calculate total charge including delivery charge, wrapping charge, and GST
+                decimal totalGSTCharge = (cProduct.TotalPayment + 25.00m + 5.00m) * 1.1m;
+                totalChargeGSTTextBox.Text = totalGSTCharge.ToString();
             }
             catch (FormatException)
             {
